@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Usuario {
         private String cedula;
         private String nombre;
@@ -7,6 +10,7 @@ public class Usuario {
         private String contrasenna;
         private String numTelefono;
         private Rol rol;
+        private List<Ticket> misTickets;
 
 
         public Usuario(){
@@ -29,7 +33,10 @@ public class Usuario {
         this.contrasenna = contrasenna;
         this.numTelefono = numTelefono;
         this.rol = rol;
+        this.misTickets = new ArrayList<>();
     }
+
+
 
     public boolean registrar() {
         System.out.println("Usuario " + nombre + " " + apellido1 + " registrado exitosamente");
@@ -45,7 +52,28 @@ public class Usuario {
         return "encrypted_" + contrasenna;
     }
 
+    public void agregarTicket(Ticket ticket) {
+        misTickets.add(ticket);
+        System.out.println("Ticket " + ticket.getId() + " agregado a la lista del usuario");
+    }
+
+    public void verMisTickets() {
+        System.out.println("\n=== Tickets de " + nombre + " " + apellido1 + " ===");
+        if (misTickets.isEmpty()) {
+            System.out.println("No tienes tickets creados");
+        } else {
+            for (Ticket ticket : misTickets) {
+                System.out.println("- ID: " + ticket.getId() + " | Asunto: " + ticket.getAsunto() + " | Estado: " + ticket.getEstado());
+            }
+        }
+    }
+
+
 //    GETTERS
+
+    public List<Ticket> getMisTickets() {
+        return misTickets;
+    }
     public String getCedula() {
         return cedula;
     }
@@ -107,6 +135,8 @@ public class Usuario {
     public void setNumTelefono(String numTelefono) {
         this.numTelefono = numTelefono;
     }
+
+
 
     @Override
     public String toString() {

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Proyecto/Proyecto.iml" filepath="$PROJECT_DIR$/Proyecto/Proyecto.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/mesa-ayuda-poo.iml" filepath="$PROJECT_DIR$/.idea/mesa-ayuda-poo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/proyecto/proyecto.iml" filepath="$PROJECT_DIR$/proyecto/proyecto.iml" />
     </modules>
   </component>
 </project>
