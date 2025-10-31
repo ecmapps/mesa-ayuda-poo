@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c513cf47-d9b3-4e78-9f3a-1152cd2e8619" name="Changes" comment="Se añade Usuario" />
+    <list default="true" id="c513cf47-d9b3-4e78-9f3a-1152cd2e8619" name="Changes" comment="Se añade Usuario">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/proyecto.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/src/Estado.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/src/Rol.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/src/Usuario.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,12 +21,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
@@ -34,23 +47,70 @@
     "accountId": "83bb1c0e-5c04-4761-8d10-66b9cf608a4a"
   }
 }]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 7
 }]]></component>
   <component name="ProjectId" id="34oP3ZGPxGry7m2GxkQxmPhyT5M" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main (1).executor": "Run",
+    "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Bryan",
     "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "C:/Users/Admin/OneDrive/Escritorio/INGENIERIA DE SOFTWARE/Programacion orientada a objetos/mesa-ayuda-poo/proyecto/src/Main.java"
+    "last_opened_file_path": "C:/Users/Admin/OneDrive/Escritorio/INGENIERIA DE SOFTWARE/Programacion orientada a objetos/mesa-ayuda-poo/Prueba",
+    "onboarding.tips.debug.path": "C:/Users/Admin/OneDrive/Escritorio/INGENIERIA DE SOFTWARE/Programacion orientada a objetos/mesa-ayuda-poo/Prueba/src/Main.java",
+    "project.structure.last.edited": "Global Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\OneDrive\Escritorio\INGENIERIA DE SOFTWARE\Programacion orientada a objetos\mesa-ayuda-poo\Prueba" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\OneDrive\Escritorio\INGENIERIA DE SOFTWARE\Programacion orientada a objetos\mesa-ayuda-poo" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Proyecto" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Proyecto" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (1)" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -82,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761878393294</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Se añade Usuario">
+      <option name="closed" value="true" />
+      <created>1761878410212</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1761878410212</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -94,8 +162,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/proyecto/src/Main.java</url>
-          <line>5</line>
-          <option name="timeStamp" value="1" />
+          <line>1</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/untitled/src/main/java/org/example/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Proyecto/src/Main.java</url>
+          <line>1</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
