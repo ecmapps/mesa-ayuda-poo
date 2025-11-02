@@ -4,6 +4,7 @@ public class Ticket {
     private String descripcion;
     private Estado estado;
     private Usuario usuario;
+    private Departamento departamento; // New attribute
 
     public Ticket() {
         id = "";
@@ -11,15 +12,14 @@ public class Ticket {
         descripcion = "";
     }
 
-
-    public Ticket(String id, String asunto, String descripcion, Estado estado, Usuario usuario) {
+    public Ticket(String id, String asunto, String descripcion, Estado estado, Usuario usuario, Departamento departamento) {
         this.id = id;
         this.asunto = asunto;
         this.descripcion = descripcion;
         this.estado = estado;
         this.usuario = usuario;
+        this.departamento = departamento; // Extendiendo la clase con departamento
     }
-
 
     public void crearTicket() {
         System.out.println("Ticket " + id + " creado exitosamente");
@@ -59,6 +59,9 @@ public class Ticket {
         return estado;
     }
 
+    public Departamento getDepartamento() {
+        return departamento;
+    }
 
 //    SETTERS
     public void setId(String id) {
@@ -75,6 +78,10 @@ public class Ticket {
 
     public void setEstado(Estado estado) {
         this.estado = estado;
+    }
+
+    public void setDepartamento(Departamento departamento) {
+        this.departamento = departamento;
     }
 
 }

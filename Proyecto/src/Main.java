@@ -35,15 +35,19 @@ public class Main {
         System.out.println("\n=== Usuarios creando tickets ===");
         usuario1.iniciarSesion();
 
-
-        Ticket ticket1 = new Ticket("TK001", "Problema con el sistema", "No puedo acceder a mi cuenta", Estado.NUEVO, usuario1);
+        //Departamento de ejemplo
+        Departamento departamento = new Departamento();
+        departamento.setId("DEP001");
+        departamento.setNombre("Soporte Técnico");
+        
+        Ticket ticket1 = new Ticket("TK001", "Problema con el sistema", "No puedo acceder a mi cuenta", Estado.NUEVO, usuario1,departamento);
         ticket1.crearTicket();
 
-        Ticket ticket2 = new Ticket("TK002", "Error en la aplicación", "La aplicación se cierra inesperadamente", Estado.NUEVO, usuario1);
+        Ticket ticket2 = new Ticket("TK002", "Error en la aplicación", "La aplicación se cierra inesperadamente", Estado.NUEVO, usuario1,departamento);
         ticket2.crearTicket();
 
         usuario2.iniciarSesion();
-        Ticket ticket3 = new Ticket("TK003", "Consulta general", "¿Cómo cambio mi contraseña?", Estado.NUEVO, usuario2);
+        Ticket ticket3 = new Ticket("TK003", "Consulta general", "¿Cómo cambio mi contraseña?", Estado.NUEVO, usuario2,departamento);
         ticket3.crearTicket();
 
 
