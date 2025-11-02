@@ -1,17 +1,12 @@
-/**
- * Representa un Departamento de la organización.
- * Basado en el diagrama UML "UML Avance 1 POO.jpg".
- */
 public class Departamento {
 
-    // --- Atributos ---
     private String id;
     private String nombre;
     private String descripcion;
     private String correoElectronico;
     private String extensionTel;
 
-    // --- Constructores --- Pendiente integrar a la DB
+    //  Constructores  Pendiente integrar a la DB
     public void registrarDepartamento() {
         System.out.println("Registrando departamento: " + this.nombre);
     }
@@ -24,7 +19,7 @@ public class Departamento {
         System.out.println("Eliminando departamento: " + this.id);
     }
 
-    // --- Getters y Setters ---
+    // Getters y Setters 
 
     public String getId() {
         return id;
