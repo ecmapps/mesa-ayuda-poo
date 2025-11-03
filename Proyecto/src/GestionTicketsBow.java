@@ -35,6 +35,21 @@ public class GestionTicketsBow {
             System.out.println("Usuario no encontrado en el sistema");
         }
     }
+    public void ConsultarTicketsDepartamento(String idDepartamento) {
+        System.out.println("\n=== Consultando tickets del departamento con ID: " + idDepartamento + " ===");
+        boolean encontrado = false;
+        for (Usuario usuario : usuarios) {
+            for (Ticket ticket : usuario.getMisTickets()) {
+                if (ticket.getDepartamento().getId().equals(idDepartamento)) {
+                    encontrado = true;
+                    ticket.verDetalle();
+                }
+            }
+        }
+        if (!encontrado) {
+            System.out.println("No se encontraron tickets para el departamento especificado");
+        }
+    }
 
     public List<Usuario> getUsuarios() {
         return usuarios;

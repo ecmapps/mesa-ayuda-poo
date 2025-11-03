@@ -36,18 +36,22 @@ public class Main {
         usuario1.iniciarSesion();
 
         //Departamento de ejemplo
-        Departamento departamento = new Departamento();
-        departamento.setId("DEP001");
-        departamento.setNombre("Soporte Técnico");
+        Departamento depTecnico = new Departamento();
+        depTecnico.setId("DEP001");
+        depTecnico.setNombre("Soporte Técnico");
+
+        Departamento depOrientacion = new Departamento();
+        depOrientacion.setId("DEP002");
+        depOrientacion.setNombre("Orientación Estudiantil");
         
-        Ticket ticket1 = new Ticket("TK001", "Problema con el sistema", "No puedo acceder a mi cuenta", Estado.NUEVO, usuario1,departamento);
+        Ticket ticket1 = new Ticket("TK001", "Problema con el sistema", "No puedo acceder a mi cuenta", Estado.NUEVO, usuario1,depTecnico);
         ticket1.crearTicket();
 
-        Ticket ticket2 = new Ticket("TK002", "Error en la aplicación", "La aplicación se cierra inesperadamente", Estado.NUEVO, usuario1,departamento);
+        Ticket ticket2 = new Ticket("TK002", "Error en la aplicación", "La aplicación se cierra inesperadamente", Estado.NUEVO, usuario1,depOrientacion);
         ticket2.crearTicket();
 
         usuario2.iniciarSesion();
-        Ticket ticket3 = new Ticket("TK003", "Consulta general", "¿Cómo cambio mi contraseña?", Estado.NUEVO, usuario2,departamento);
+        Ticket ticket3 = new Ticket("TK003", "Consulta general", "¿Cómo cambio mi contraseña?", Estado.NUEVO, usuario2,depTecnico);
         ticket3.crearTicket();
 
 
@@ -56,7 +60,9 @@ public class Main {
 
 
         gestor.consultarTicketsUsuario("123456789");
-
+        //Revisar por departamento
+        gestor.ConsultarTicketsDepartamento("DEP001");
+        gestor.ConsultarTicketsDepartamento("DEP002");
 
         System.out.println("\n=== Actualizando estado de ticket ===");
         Ticket primerTicket = usuario1.getMisTickets().get(0);
