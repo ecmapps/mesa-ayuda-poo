@@ -35,11 +35,11 @@ public class Ticket {
     }
 
     public void verDetalle() {
-        System.out.println("Detalles del Ticket:");
+        System.out.println("\nDetalles del Ticket:");
         System.out.println("ID: " + id);
         System.out.println("Asunto: " + asunto);
         System.out.println("Descripción: " + descripcion);
-        System.out.println("Estado: " + estado);
+        System.out.println("Estado: " + estado + "\n");
     }
 
 //    GETTERS
