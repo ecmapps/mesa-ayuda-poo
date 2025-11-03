@@ -8,6 +8,7 @@ public class AnalisisBow {
         System.out.println("Analizando Ticket: " + ticket.getId());
         detectarAnimo();
         sugerirCategoriaTecnica();
+        mostrarResultados();
         System.out.println("Análisis completado.");
     }
 
@@ -19,8 +20,8 @@ public class AnalisisBow {
 
     //Diccionario Tecnico para la decision de categoria.. pendiente
     public void sugerirCategoriaTecnica() {
-        System.out.println("Categoria sugerida: ");
         this.categoriaSugerida = "IT"; // Ejemplo
+        System.out.println("Categoria sugerida: "+categoriaSugerida);
     }
 
     //Consola por ahora para los resultados

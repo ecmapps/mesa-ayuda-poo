@@ -64,6 +64,10 @@ public class Main {
         gestor.ConsultarTicketsDepartamento("DEP001");
         gestor.ConsultarTicketsDepartamento("DEP002");
 
+        //AnalisisBow
+        AnalisisBow analisis = new AnalisisBow();
+        analisis.analizarPalabras(ticket3);
+
         System.out.println("\n=== Actualizando estado de ticket ===");
         Ticket primerTicket = usuario1.getMisTickets().get(0);
         primerTicket.actualizarEstado(Estado.EN_PROGRESO);
