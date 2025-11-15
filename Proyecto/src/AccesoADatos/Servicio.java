@@ -25,7 +25,7 @@ public class Servicio {
             Class.forName("oracle.jdbc.driver.OracleDriver");
             String url = "jdbc:oracle:thin:@//localhost:1521/xe";
             String username = "SYSTEM";
-            String password = "TrollBoxD";
+            String password = "PASSWORD";
             conexion = DriverManager.getConnection(url,username,password);
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(Servicio.class.getName()).log(Level.SEVERE, null, ex);
