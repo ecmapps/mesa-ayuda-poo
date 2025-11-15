@@ -1,3 +1,5 @@
+package LogicaDeNegocio;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,12 +41,12 @@ public class Usuario {
 
 
     public boolean registrar() {
-        System.out.println("Usuario " + nombre + " " + apellido1 + " registrado exitosamente");
+        System.out.println("LogicaDeNegocio.Usuario " + nombre + " " + apellido1 + " registrado exitosamente");
         return true;
     }
 
     public boolean iniciarSesion() {
-        System.out.println("Usuario " + correoElectronico + " ha iniciado sesión");
+        System.out.println("LogicaDeNegocio.Usuario " + correoElectronico + " ha iniciado sesión");
         return true;
     }
 
@@ -54,7 +56,7 @@ public class Usuario {
 
     public void agregarTicket(Ticket ticket) {
         misTickets.add(ticket);
-        System.out.println("Ticket " + ticket.getId() + " agregado a la lista del usuario");
+        System.out.println("LogicaDeNegocio.Ticket " + ticket.getId() + " agregado a la lista del usuario");
     }
 
     public void verMisTickets() {
@@ -63,7 +65,7 @@ public class Usuario {
             System.out.println("No tienes tickets creados");
         } else {
             for (Ticket ticket : misTickets) {
-                System.out.println("- ID: " + ticket.getId() + " | Asunto: " + ticket.getAsunto() + " | Estado: " + ticket.getEstado());
+                System.out.println("- ID: " + ticket.getId() + " | Asunto: " + ticket.getAsunto() + " | LogicaDeNegocio.Estado: " + ticket.getEstado());
             }
         }
     }
@@ -140,7 +142,7 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario{" +
+        return "LogicaDeNegocio.Usuario{" +
                 "cedula='" + cedula + '\'' +
                 ", nombre='" + nombre + '\'' +
                 ", apellido1='" + apellido1 + '\'' +
