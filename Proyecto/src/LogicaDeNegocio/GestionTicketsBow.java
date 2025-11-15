@@ -1,3 +1,5 @@
+package LogicaDeNegocio;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +15,7 @@ public class GestionTicketsBow {
 
     public void registrarUsuario(Usuario usuario) {
         usuarios.add(usuario);
-        System.out.println("Usuario registrado en el sistema: " + usuario.getNombre());
+        System.out.println("LogicaDeNegocio.Usuario registrado en el sistema: " + usuario.getNombre());
     }
     public void consultarTicketsUsuario(String cedula) {
         System.out.println("\n=== Consultando tickets del usuario con cédula: " + cedula + " ===");
@@ -32,7 +34,7 @@ public class GestionTicketsBow {
             }
         }
         if (!encontrado) {
-            System.out.println("Usuario no encontrado en el sistema");
+            System.out.println("LogicaDeNegocio.Usuario no encontrado en el sistema");
         }
     }
     public void ConsultarTicketsDepartamento(String idDepartamento) {

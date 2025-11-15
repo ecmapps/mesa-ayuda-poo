@@ -1,3 +1,7 @@
+package diccionario;
+
+import LogicaDeNegocio.Ticket;
+
 public class AnalisisBow {
 
     private String estadoAnimo;
@@ -5,14 +9,14 @@ public class AnalisisBow {
 
     // Analisis del texto de un ticket (uso de diccionarios)
     public void analizarPalabras(Ticket ticket) {
-        System.out.println("Analizando Ticket: " + ticket.getId());
+        System.out.println("Analizando LogicaDeNegocio.Ticket: " + ticket.getId());
         detectarAnimo();
         sugerirCategoriaTecnica();
         mostrarResultados();
         System.out.println("Análisis completado.");
     }
 
-    // Deteccion de animo.. 
+    // Deteccion de animo..
     public void detectarAnimo() {
         System.out.println("Detectando ánimo...");
         this.estadoAnimo = "Frustración"; // Ejemplo
@@ -21,13 +25,13 @@ public class AnalisisBow {
     //Diccionario Tecnico para la decision de categoria.. pendiente
     public void sugerirCategoriaTecnica() {
         this.categoriaSugerida = "IT"; // Ejemplo
-        System.out.println("Categoria sugerida: "+categoriaSugerida);
+        System.out.println("Categoria sugerida: " + categoriaSugerida);
     }
 
     //Consola por ahora para los resultados
     public void mostrarResultados() {
         System.out.println("--- Resultados del Análisis ---");
-        System.out.println("Estado de Ánimo: " + this.estadoAnimo);
+        System.out.println("LogicaDeNegocio.Estado de Ánimo: " + this.estadoAnimo);
         System.out.println("Categoría Sugerida: " + this.categoriaSugerida);
     }
 
@@ -47,9 +51,4 @@ public class AnalisisBow {
     public void setCategoriaSugerida(String categoriaSugerida) {
         this.categoriaSugerida = categoriaSugerida;
     }
-}
-
-// --- Clase pendiente ---
-class PalabraDiccionario {
-    // Eliminar cuando se cree esta clase
 }

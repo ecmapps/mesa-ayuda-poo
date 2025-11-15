@@ -1,3 +1,6 @@
+package LogicaDeNegocio;
+
+import diccionario.AnalisisBow;
 
 public class Main {
     public static void main(String[] args) {
@@ -35,7 +38,7 @@ public class Main {
         System.out.println("\n=== Usuarios creando tickets ===");
         usuario1.iniciarSesion();
 
-        //Departamento de ejemplo
+        //LogicaDeNegocio.Departamento de ejemplo
         Departamento depTecnico = new Departamento();
         depTecnico.setId("DEP001");
         depTecnico.setNombre("Soporte Técnico");
@@ -64,7 +67,7 @@ public class Main {
         gestor.ConsultarTicketsDepartamento("DEP001");
         gestor.ConsultarTicketsDepartamento("DEP002");
 
-        //AnalisisBow
+        //diccionario.AnalisisBow
         AnalisisBow analisis = new AnalisisBow();
         analisis.analizarPalabras(ticket3);
 

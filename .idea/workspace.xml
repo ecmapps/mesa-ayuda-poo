@@ -4,8 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c513cf47-d9b3-4e78-9f3a-1152cd2e8619" name="Changes" comment="Se añade Usuario">
+    <list default="true" id="c513cf47-d9b3-4e78-9f3a-1152cd2e8619" name="Changes" comment="Unversioned files">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_11_2025_09_26_p__m___Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_11_2025_09_26_p_ m__[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_11_2025_09_29_p__m___Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_11_2025_09_29_p_ m__[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_11_2025_09_32_p__m___Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_11_2025_09_32_p_ m__[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/Proyecto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/Proyecto.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/AnalisisBow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/Departamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/LogicaDeNegocio/Departamento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/Estado.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/LogicaDeNegocio/Estado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/GestionTicketsBow.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/LogicaDeNegocio/GestionTicketsBow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/LogicaDeNegocio/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/Rol.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/LogicaDeNegocio/Rol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/LogicaDeNegocio/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/LogicaDeNegocio/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/diccionario/DiccionarioEmocinal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proyecto/Estado.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proyecto/GestionTicketsBow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proyecto/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proyecto/Rol.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proyecto/Ticket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proyecto/Usuario.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proyecto/diccionario/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proyecto/diccionario/main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +61,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/ecmapps/mesa-ayuda-poo.git&quot;,
-    &quot;accountId&quot;: &quot;78cad46e-30fa-4edc-b3b5-fc301eb360f4&quot;
+    &quot;accountId&quot;: &quot;83bb1c0e-5c04-4761-8d10-66b9cf608a4a&quot;
   }
 }</component>
   <component name="ProblemsViewState">
@@ -48,7 +71,7 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="34oP3ZGPxGry7m2GxkQxmPhyT5M" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -59,10 +82,13 @@
   "keyToString": {
     "Application.Main (1).executor": "Run",
     "Application.Main.executor": "Run",
+    "Application.Servicio.executor": "Run",
+    "Application.ServicioTicket.executor": "Run",
+    "Application.ServicioUsuario.executor": "Run",
     "Application.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Dayana",
+    "git-widget-placeholder": "AccesoADatosBryan",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Admin/OneDrive/Escritorio/INGENIERIA DE SOFTWARE/Programacion orientada a objetos/mesa-ayuda-poo/Prueba",
     "node.js.detected.package.eslint": "true",
@@ -71,7 +97,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/Admin/OneDrive/Escritorio/INGENIERIA DE SOFTWARE/Programacion orientada a objetos/mesa-ayuda-poo/Prueba/src/Main.java",
-    "project.structure.last.edited": "Global Libraries",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
@@ -85,38 +111,86 @@
       <recent name="C:\Users\Admin\OneDrive\Escritorio\INGENIERIA DE SOFTWARE\Programacion orientada a objetos\mesa-ayuda-poo" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="AccesoADatos" />
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+  <component name="RunManager" selected="Application.ServicioTicket">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="LogicaDeNegocio.Main" />
       <module name="Proyecto" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="21" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="Main" />
+    <configuration name="Servicio" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AccesoADatos.Servicio" />
       <module name="Proyecto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="AccesoADatos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServicioTicket" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AccesoADatos.ServicioTicket" />
+      <module name="Proyecto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="AccesoADatos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServicioUsuario" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AccesoADatos.ServicioUsuario" />
+      <module name="Proyecto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="AccesoADatos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="diccionario.main" />
+      <module name="Proyecto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="diccionario.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ServicioTicket" />
+        <item itemvalue="Application.ServicioUsuario" />
+        <item itemvalue="Application.Servicio" />
+        <item itemvalue="Application.main" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main (1)" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.26775.15" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.26775.15" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131" />
       </set>
     </attachedChunks>
   </component>
@@ -192,19 +266,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/proyecto/src/Main.java</url>
-          <line>1</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/untitled/src/main/java/org/example/Main.java</url>
           <line>13</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Proyecto/src/Main.java</url>
-          <line>1</line>
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

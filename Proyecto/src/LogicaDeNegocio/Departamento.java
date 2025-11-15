@@ -1,3 +1,5 @@
+package LogicaDeNegocio;
+
 public class Departamento {
 
     private String id;
@@ -19,7 +21,7 @@ public class Departamento {
         System.out.println("Eliminando departamento: " + this.id);
     }
 
-    // Getters y Setters 
+    // Getters y Setters
 
     public String getId() {
         return id;
