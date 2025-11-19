@@ -1,5 +1,9 @@
 package diccionario;
 
+import AccesoADatos.ServicioDiccionarioTecnico;
+import AccesoADatos.GlobalException;
+import AccesoADatos.NoDataException;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -7,6 +11,21 @@ public class DiccionarioTecnico extends Diccionario {
 
     public DiccionarioTecnico() {
         super();
+    }
+    //bd
+    public void cargarDesdeBD() throws GlobalException, NoDataException {
+        ServicioDiccionarioTecnico servicio = new ServicioDiccionarioTecnico();
+        Collection<PalabraDiccionario> lista = servicio.listarTodos();
+
+        for (PalabraDiccionario p : lista) {
+            this.agregarPalabra(p);
+        }
+    }
+
+    public void agregarPalabra(PalabraDiccionario palabra) {
+        if (palabra != null) {
+            palabras.add(palabra);
+        }
     }
 
     public String obtenerCategoriaTecnica(String descripcion) {
