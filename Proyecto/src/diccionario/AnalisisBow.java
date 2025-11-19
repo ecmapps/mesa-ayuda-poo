@@ -1,11 +1,24 @@
 package diccionario;
 
 import LogicaDeNegocio.Ticket;
+import AccesoADatos.GlobalException;
+import AccesoADatos.NoDataException;
 
 public class AnalisisBow {
 
     private String estadoAnimo;
     private String categoriaSugerida;
+    private DiccionarioEmocional diccionarioEmocional;
+    private DiccionarioTecnico diccionarioTecnico;
+
+    //new
+    public AnalisisBow() throws GlobalException, NoDataException {
+        diccionarioEmocional = new DiccionarioEmocional();
+        diccionarioEmocional.cargarDesdeBD();
+
+        diccionarioTecnico = new DiccionarioTecnico();
+        diccionarioTecnico.cargarDesdeBD();
+    }
 
     // Analisis del texto de un ticket (uso de diccionarios)
     public void analizarPalabras(Ticket ticket) {
@@ -15,7 +28,6 @@ public class AnalisisBow {
         mostrarResultados();
         System.out.println("Análisis completado.");
     }
-
     // Deteccion de animo..
     public void detectarAnimo() {
         System.out.println("Detectando ánimo...");
@@ -51,4 +63,36 @@ public class AnalisisBow {
     public void setCategoriaSugerida(String categoriaSugerida) {
         this.categoriaSugerida = categoriaSugerida;
     }
+
+    public void setDiccionarioEmocional(DiccionarioEmocional diccionarioEmocional) {
+        this.diccionarioEmocional = diccionarioEmocional;
+    }
+
+    public void setDiccionarioTecnico(DiccionarioTecnico diccionarioTecnico) {
+        this.diccionarioTecnico = diccionarioTecnico;
+    }
+
+    public void analizarPalabrasConDiccionarios(Ticket ticket) {
+        System.out.println("Analizando LogicaDeNegocio.Ticket: " + ticket.getId());
+
+        String descripcion = ticket.getDescripcion();
+
+        if (diccionarioEmocional != null) {
+            this.estadoAnimo = diccionarioEmocional.detectarEmocion(descripcion);
+        } else {
+            detectarAnimo();
+        }
+
+        if (diccionarioTecnico != null) {
+            this.categoriaSugerida = diccionarioTecnico.obtenerCategoriaTecnica(descripcion);
+        } else {
+            sugerirCategoriaTecnica();
+        }
+        mostrarResultados();
+        System.out.println("Análisis completado");
+    }
+
 }
+
+
+

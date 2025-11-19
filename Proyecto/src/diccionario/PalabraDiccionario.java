@@ -5,7 +5,6 @@ public class PalabraDiccionario {
     private String palabra;
     private String categoria;
 
-    // Constructor por defecto
     public PalabraDiccionario() {
     }
 

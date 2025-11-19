@@ -1,6 +1,12 @@
 package LogicaDeNegocio;
 
 import diccionario.AnalisisBow;
+//new
+import diccionario.DiccionarioEmocional;
+import diccionario.DiccionarioTecnico;
+import diccionario.PalabraDiccionario;
+import AccesoADatos.GlobalException;
+import AccesoADatos.NoDataException;
 
 public class Main {
     public static void main(String[] args) {
@@ -68,12 +74,27 @@ public class Main {
         gestor.ConsultarTicketsDepartamento("DEP002");
 
         //diccionario.AnalisisBow
-        AnalisisBow analisis = new AnalisisBow();
-        analisis.analizarPalabras(ticket3);
+        //AnalisisBow analisis = new AnalisisBow();
+        //analisis.analizarPalabras(ticket3);
 
         System.out.println("\n=== Actualizando estado de ticket ===");
         Ticket primerTicket = usuario1.getMisTickets().get(0);
         primerTicket.actualizarEstado(Estado.EN_PROGRESO);
         primerTicket.verDetalle();
+
+       //new
+        try {
+            AnalisisBow analisisBD = new AnalisisBow();   //bd
+            analisisBD.analizarPalabrasConDiccionarios(ticket3);
+        } catch (GlobalException | NoDataException e) {
+            System.out.println("Error cargando diccionarios desde la BD: " + e.getMessage());
+        }
+
+        DiccionarioEmocional dicEmo = new DiccionarioEmocional();
+        dicEmo.agregarPalabra(new PalabraDiccionario("molesto", "Frustración"));
+
+        DiccionarioTecnico dicTec = new DiccionarioTecnico();
+        dicTec.agregarPalabra(new PalabraDiccionario("contraseña", "Seguridad"));
+        dicTec.agregarPalabra(new PalabraDiccionario("cuenta", "Accesos"));
     }
 }
