@@ -14,7 +14,6 @@ public class DiccionarioEmocional extends Diccionario {
         super();
     }
 
-    //palabras desde la base de datos
     public void cargarDesdeBD() throws GlobalException, NoDataException {
         ServicioDiccionarioEmocional servicio = new ServicioDiccionarioEmocional();
         Collection<PalabraDiccionario> lista = servicio.listarTodos();
