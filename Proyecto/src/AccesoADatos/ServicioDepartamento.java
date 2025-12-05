@@ -1,114 +1,213 @@
 package AccesoADatos;
 
 import LogicaDeNegocio.Departamento;
-
-import java.sql.CallableStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.CallableStatement;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import oracle.jdbc.internal.OracleTypes;
 
-// ServicioDepartamento: Clase que gestiona las operaciones CRUD de departamentos en la base de datos.
 public class ServicioDepartamento extends Servicio {
 
-    private static final String insertar = "{ call insertarDepartamento(?, ?, ?, ?, ?) }";
-    private static final String actualizar = "{ call actualizarDepartamento(?, ?, ?, ?, ?) }";
-    private static final String eliminar = "{ call eliminarDepartamento(?) }";
-    private static final String listar = "{ ? = call listarDepartamentos() }";
+    private static final String registrarDepartamento = "{ call registrarDepartamento(?,?) }";
+    private static final String buscarDepartamento = "{ ? = call buscarDepartamento(?) }";
+    private static final String listarDepartamentos = "{ ? = call listarDepartamentos() }";
+    private static final String actualizarDepartamento = "{ call actualizarDepartamento(?,?) }";
+    private static final String eliminarDepartamento = "{ call eliminarDepartamento(?) }";
 
-    public void insertar(Departamento departamento) throws GlobalException, NoDataException {
+    public ServicioDepartamento() { }
+
+    public Collection<Departamento> listarDepartamentos() throws GlobalException, NoDataException {
         conectar();
-        CallableStatement pstmt = null;
-
-        try {
-            pstmt = conexion.prepareCall(insertar);
-            pstmt.setString(1, departamento.getId());
-            pstmt.setString(2, departamento.getNombre());
-            pstmt.setString(3, departamento.getDescripcion());
-            pstmt.setString(4, departamento.getCorreoElectronico());
-            pstmt.setString(5, departamento.getExtensionTel());
-
-            boolean resultado = pstmt.execute();
-            if (resultado) {
-                throw new NoDataException("No se pudo insertar el departamento.");
-            }
-        } catch (SQLException e) {
-            throw new GlobalException("Error al insertar el departamento.");
-        } finally {
-            cerrarRecursos(pstmt);
-        }
-    }
-
-    public void actualizar(Departamento departamento) throws GlobalException, NoDataException {
-        conectar();
-        CallableStatement pstmt = null;
-
-        try {
-            pstmt = conexion.prepareCall(actualizar);
-            pstmt.setString(1, departamento.getId());
-            pstmt.setString(2, departamento.getNombre());
-            pstmt.setString(3, departamento.getDescripcion());
-            pstmt.setString(4, departamento.getCorreoElectronico());
-            pstmt.setString(5, departamento.getExtensionTel());
-
-            boolean resultado = pstmt.execute();
-            if (resultado) {
-                throw new NoDataException("No se pudo actualizar el departamento.");
-            }
-        } catch (SQLException e) {
-            throw new GlobalException("Error al actualizar el departamento.");
-        } finally {
-            cerrarRecursos(pstmt);
-        }
-    }
-
-    public void eliminar(String id) throws GlobalException, NoDataException {
-        conectar();
-        CallableStatement pstmt = null;
-
-        try {
-            pstmt = conexion.prepareCall(eliminar);
-            pstmt.setString(1, id);
-
-            boolean resultado = pstmt.execute();
-            if (resultado) {
-                throw new NoDataException("No se pudo eliminar el departamento.");
-            }
-        } catch (SQLException e) {
-            throw new GlobalException("Error al eliminar el departamento.");
-        } finally {
-            cerrarRecursos(pstmt);
-        }
-    }
-
-    public Collection<Departamento> listarTodos() throws GlobalException, NoDataException {
-        conectar();
-        CallableStatement pstmt = null;
         ResultSet rs = null;
-        Collection<Departamento> departamentos = new ArrayList<>();
+        ArrayList<Departamento> lista = new ArrayList<>();
+        CallableStatement pstmt = null;
 
         try {
-            pstmt = conexion.prepareCall(listar);
-            pstmt.registerOutParameter(1, oracle.jdbc.OracleTypes.CURSOR);
+            pstmt = conexion.prepareCall(listarDepartamentos);
+            pstmt.registerOutParameter(1, OracleTypes.CURSOR);
             pstmt.execute();
 
             rs = (ResultSet) pstmt.getObject(1);
+
             while (rs.next()) {
-                Departamento departamento = new Departamento(
-                    rs.getString("id"),
-                    rs.getString("nombre"),
-                    rs.getString("descripcion"),
-                    rs.getString("correoElectronico"),
-                    rs.getString("extensionTel")
+                Departamento d = new Departamento(
+                        rs.getString("id"),
+                        rs.getString("nombre"),
+                        rs.getString("descripcion"),
+                        rs.getString("correoElectronico"),
+                        rs.getString("extensionTel")
                 );
-                departamentos.add(departamento);
+                lista.add(d);
             }
+
         } catch (SQLException e) {
-            throw new GlobalException("Error al listar los departamentos.");
+            e.printStackTrace();
+            throw new GlobalException("Error al listar departamentos.");
         } finally {
-            cerrarRecursos(rs, pstmt);
+            try {
+                if (rs != null) rs.close();
+                if (pstmt != null) pstmt.close();
+                desconectar();
+            } catch (SQLException e) {
+                throw new GlobalException("Error cerrando recursos.");
+            }
         }
 
-        return departamentos;
+        if (lista.isEmpty()) throw new NoDataException("No hay departamentos registrados.");
+
+        return lista;
+    }
+
+    public void registrarDepartamento(Departamento d) throws GlobalException, NoDataException {
+        conectar();
+        CallableStatement pstmt = null;
+
+        try {
+            pstmt = conexion.prepareCall(registrarDepartamento);
+            pstmt.setString(1, d.getId());
+            pstmt.setString(2, d.getNombre());
+
+            boolean resultado = pstmt.execute();
+
+            if (resultado) {
+                throw new NoDataException("No se pudo insertar el departamento.");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new GlobalException("Error al registrar departamento. ¿ID duplicado?");
+        } finally {
+            try {
+                if (pstmt != null) pstmt.close();
+                desconectar();
+            } catch (SQLException e) {
+                throw new GlobalException("Error cerrando recursos.");
+            }
+        }
+    }
+
+    public Departamento buscarDepartamento(String id) throws GlobalException, NoDataException {
+        conectar();
+        CallableStatement pstmt = null;
+        ResultSet rs = null;
+        Departamento d = null;
+
+        try {
+            pstmt = conexion.prepareCall(buscarDepartamento);
+            pstmt.registerOutParameter(1, OracleTypes.CURSOR);
+            pstmt.setString(2, id);
+            pstmt.execute();
+
+            rs = (ResultSet) pstmt.getObject(1);
+
+            if (rs.next()) {
+                d = new Departamento(
+                        rs.getString("id"),
+                        rs.getString("nombre"),
+                        rs.getString("descripcion"),
+                        rs.getString("correoElectronico"),
+                        rs.getString("extensionTel")
+                );
+            } else {
+                throw new NoDataException("Departamento no encontrado.");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new GlobalException("Error al consultar departamento.");
+        } finally {
+            try {
+                if (rs != null) rs.close();
+                if (pstmt != null) pstmt.close();
+                desconectar();
+            } catch (SQLException e) {
+                throw new GlobalException("Error cerrando recursos.");
+            }
+        }
+
+        return d;
+    }
+
+    public void actualizarDepartamento(Departamento d) throws GlobalException, NoDataException {
+        conectar();
+        CallableStatement pstmt = null;
+
+        try {
+            pstmt = conexion.prepareCall(actualizarDepartamento);
+            pstmt.setString(1, d.getId());
+            pstmt.setString(2, d.getNombre());
+
+            int resultado = pstmt.executeUpdate();
+
+            if (resultado == 0) {
+                throw new NoDataException("No se actualizó el departamento.");
+            }
+
+            System.out.println("Departamento actualizado correctamente.");
+
+        } catch (SQLException e) {
+            throw new GlobalException("Error al actualizar departamento: " + e.getMessage());
+        } finally {
+            try {
+                if (pstmt != null) pstmt.close();
+                desconectar();
+            } catch (SQLException e) {
+                throw new GlobalException("Error cerrando recursos.");
+            }
+        }
+    }
+
+    public void eliminarDepartamento(String id) throws GlobalException, NoDataException {
+        conectar();
+        CallableStatement pstmt = null;
+
+        try {
+            pstmt = conexion.prepareCall(eliminarDepartamento);
+            pstmt.setString(1, id);
+
+            int resultado = pstmt.executeUpdate();
+
+            if (resultado == 0) {
+                throw new NoDataException("No se eliminó el departamento.");
+            }
+
+            System.out.println("Departamento eliminado correctamente.");
+
+        } catch (SQLException e) {
+            throw new GlobalException("Error al eliminar departamento.");
+        } finally {
+            try {
+                if (pstmt != null) pstmt.close();
+                desconectar();
+            } catch (SQLException e) {
+                throw new GlobalException("Error cerrando recursos.");
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        ServicioDepartamento sd = new ServicioDepartamento();
+        Collection coleccion;
+
+        try {
+            // Ejemplo de registrar
+            // sd.registrarDepartamento(new Departamento("DEPT001", "Soporte Técnico"));
+
+            // Listar departamentos
+            System.out.println("Listado de Departamentos");
+            coleccion = sd.listarDepartamentos();
+            for (Iterator it = coleccion.iterator(); it.hasNext();) {
+                Departamento d = (Departamento) it.next();
+                System.out.println(d.toString());
+            }
+
+        } catch (Exception ex) {
+            Logger.getLogger(ServicioDepartamento.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }

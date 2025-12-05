@@ -1,0 +1,127 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"c513cf47-d9b3-4e78-9f3a-1152cd2e8619\" name=\"Changes\" comment=\"Unversioned files\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_11_2025_09_26_p__m___Changes_.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_11_2025_09_26_p_ m__[Changes]/shelved.patch\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_11_2025_09_29_p__m___Changes_1.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_11_2025_09_29_p_ m__[Changes]1/shelved.patch\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_11_2025_09_32_p__m___Changes_.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_11_2025_09_32_p_ m__[Changes]/shelved.patch\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Proyecto/Proyecto.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Proyecto/Proyecto.iml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Proyecto/src/AnalisisBow.java\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Proyecto/src/Departamento.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Proyecto/src/LogicaDeNegocio/Departamento.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Proyecto/src/Estado.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Proyecto/src/LogicaDeNegocio/Estado.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Proyecto/src/GestionTicketsBow.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Proyecto/src/LogicaDeNegocio/GestionTicketsBow.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Proyecto/src/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Proyecto/src/LogicaDeNegocio/Main.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Proyecto/src/Rol.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Proyecto/src/LogicaDeNegocio/Rol.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Proyecto/src/Ticket.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Proyecto/src/LogicaDeNegocio/Ticket.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Proyecto/src/Usuario.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Proyecto/src/LogicaDeNegocio/Usuario.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Proyecto/src/diccionario/DiccionarioEmocinal.java\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/Proyecto/Estado.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/Proyecto/GestionTicketsBow.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/Proyecto/Main.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/Proyecto/Rol.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/Proyecto/Ticket.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/Proyecto/Usuario.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/Proyecto/diccionario/main.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/Proyecto/diccionario/main.class\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Enum\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"UPDATE_TYPE\" value=\"REBASE\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;BryanMillon&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/ecmapps/mesa-ayuda-poo.git&quot;,\r\n    &quot;accountId&quot;: &quot;83bb1c0e-5c04-4761-8d10-66b9cf608a4a&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 7\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"34oP3ZGPxGry7m2GxkQxmPhyT5M\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"1\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Application.Main (1).executor\": \"Run\",\r\n    \"Application.Main.executor\": \"Run\",\r\n    \"Application.Servicio.executor\": \"Run\",\r\n    \"Application.ServicioTicket.executor\": \"Run\",\r\n    \"Application.ServicioUsuario.executor\": \"Run\",\r\n    \"Application.main.executor\": \"Run\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.git.unshallow\": \"true\",\r\n    \"git-widget-placeholder\": \"AccesoADatosBryan\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/Admin/OneDrive/Escritorio/INGENIERIA DE SOFTWARE/Programacion orientada a objetos/mesa-ayuda-poo/Prueba\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"onboarding.tips.debug.path\": \"C:/Users/Admin/OneDrive/Escritorio/INGENIERIA DE SOFTWARE/Programacion orientada a objetos/mesa-ayuda-poo/Prueba/src/Main.java\",\r\n    \"project.structure.last.edited\": \"Modules\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Admin\\OneDrive\\Escritorio\\INGENIERIA DE SOFTWARE\\Programacion orientada a objetos\\mesa-ayuda-poo\\Prueba\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Admin\\OneDrive\\Escritorio\\INGENIERIA DE SOFTWARE\\Programacion orientada a objetos\\mesa-ayuda-poo\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"AccesoADatos\" />\r\n      <recent name=\"org.example\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.ServicioTicket\">\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"ALTERNATIVE_JRE_PATH\" value=\"21\" />\r\n      <option name=\"ALTERNATIVE_JRE_PATH_ENABLED\" value=\"true\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"LogicaDeNegocio.Main\" />\r\n      <module name=\"Proyecto\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Servicio\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"AccesoADatos.Servicio\" />\r\n      <module name=\"Proyecto\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"AccesoADatos.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ServicioTicket\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"AccesoADatos.ServicioTicket\" />\r\n      <module name=\"Proyecto\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"AccesoADatos.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ServicioUsuario\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"AccesoADatos.ServicioUsuario\" />\r\n      <module name=\"Proyecto\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"AccesoADatos.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"diccionario.main\" />\r\n      <module name=\"Proyecto\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"diccionario.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.ServicioTicket\" />\r\n        <item itemvalue=\"Application.ServicioUsuario\" />\r\n        <item itemvalue=\"Application.Servicio\" />\r\n        <item itemvalue=\"Application.main\" />\r\n        <item itemvalue=\"Application.Main\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"c513cf47-d9b3-4e78-9f3a-1152cd2e8619\" name=\"Changes\" comment=\"\" />\r\n      <created>1761876755425</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1761876755425</updated>\r\n      <workItem from=\"1761897863030\" duration=\"953000\" />\r\n      <workItem from=\"1761948268635\" duration=\"325000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Se añade Usuario\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1761878260924</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1761878260924</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Se añade Usuario\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1761878393294</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1761878393294</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Se añade Usuario\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1761878410212</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1761878410212</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"4\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"Dayana\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Se añade Usuario\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Se añade Usuario\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/untitled/src/main/java/org/example/Main.java</url>\r\n          <line>13</line>\r\n          <option name=\"timeStamp\" value=\"4\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision f5a569b45721e9d6ac0f1497a8aa011a5b29432e)
++++ b/.idea/workspace.xml	(date 1763215603714)
+@@ -4,32 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="c513cf47-d9b3-4e78-9f3a-1152cd2e8619" name="Changes" comment="Unversioned files">
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_11_2025_09_26_p__m___Changes_.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_11_2025_09_26_p_ m__[Changes]/shelved.patch" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_11_2025_09_29_p__m___Changes_1.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_11_2025_09_29_p_ m__[Changes]1/shelved.patch" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_11_2025_09_32_p__m___Changes_.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_11_2025_09_32_p_ m__[Changes]/shelved.patch" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Proyecto/Proyecto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/Proyecto.iml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Proyecto/src/AnalisisBow.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Proyecto/src/Departamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/LogicaDeNegocio/Departamento.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Proyecto/src/Estado.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/LogicaDeNegocio/Estado.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Proyecto/src/GestionTicketsBow.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/LogicaDeNegocio/GestionTicketsBow.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Proyecto/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/LogicaDeNegocio/Main.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Proyecto/src/Rol.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/LogicaDeNegocio/Rol.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Proyecto/src/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/LogicaDeNegocio/Ticket.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Proyecto/src/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/LogicaDeNegocio/Usuario.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Proyecto/src/diccionario/DiccionarioEmocinal.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto/Estado.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto/GestionTicketsBow.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto/Main.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto/Rol.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto/Ticket.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto/Usuario.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto/diccionario/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proyecto/diccionario/main.class" afterDir="false" />
+-    </list>
++    <list default="true" id="c513cf47-d9b3-4e78-9f3a-1152cd2e8619" name="Changes" comment="ARREGLANDO EL SERVICIO" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -78,31 +53,31 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Application.Main (1).executor": "Run",
+-    "Application.Main.executor": "Run",
+-    "Application.Servicio.executor": "Run",
+-    "Application.ServicioTicket.executor": "Run",
+-    "Application.ServicioUsuario.executor": "Run",
+-    "Application.main.executor": "Run",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "RunOnceActivity.git.unshallow": "true",
+-    "git-widget-placeholder": "AccesoADatosBryan",
+-    "kotlin-language-version-configured": "true",
+-    "last_opened_file_path": "C:/Users/Admin/OneDrive/Escritorio/INGENIERIA DE SOFTWARE/Programacion orientada a objetos/mesa-ayuda-poo/Prueba",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "onboarding.tips.debug.path": "C:/Users/Admin/OneDrive/Escritorio/INGENIERIA DE SOFTWARE/Programacion orientada a objetos/mesa-ayuda-poo/Prueba/src/Main.java",
+-    "project.structure.last.edited": "Modules",
+-    "project.structure.proportion": "0.15",
+-    "project.structure.side.proportion": "0.2",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Application.Main (1).executor&quot;: &quot;Run&quot;,
++    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
++    &quot;Application.Servicio.executor&quot;: &quot;Run&quot;,
++    &quot;Application.ServicioTicket.executor&quot;: &quot;Run&quot;,
++    &quot;Application.ServicioUsuario.executor&quot;: &quot;Run&quot;,
++    &quot;Application.main.executor&quot;: &quot;Run&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;AccesoADatosBryan&quot;,
++    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/OneDrive/Escritorio/INGENIERIA DE SOFTWARE/Programacion orientada a objetos/mesa-ayuda-poo/Prueba&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Admin/OneDrive/Escritorio/INGENIERIA DE SOFTWARE/Programacion orientada a objetos/mesa-ayuda-poo/Prueba/src/Main.java&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="C:\Users\Admin\OneDrive\Escritorio\INGENIERIA DE SOFTWARE\Programacion orientada a objetos\mesa-ayuda-poo\Prueba" />
+@@ -229,7 +204,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1761878410212</updated>
+     </task>
+-    <option name="localTasksCounter" value="4" />
++    <task id="LOCAL-00004" summary="ARREGLANDO EL SERVICIO">
++      <option name="closed" value="true" />
++      <created>1763215283907</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1763215283907</updated>
++    </task>
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -260,7 +243,8 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Se añade Usuario" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Se añade Usuario" />
++    <MESSAGE value="ARREGLANDO EL SERVICIO" />
++    <option name="LAST_COMMIT_MESSAGE" value="ARREGLANDO EL SERVICIO" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
