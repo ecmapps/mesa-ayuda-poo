@@ -11,7 +11,6 @@ public class AnalisisBow {
     private DiccionarioEmocional diccionarioEmocional;
     private DiccionarioTecnico diccionarioTecnico;
 
-    //new
     public AnalisisBow() throws GlobalException, NoDataException {
         diccionarioEmocional = new DiccionarioEmocional();
         diccionarioEmocional.cargarDesdeBD();
@@ -91,7 +90,37 @@ public class AnalisisBow {
         mostrarResultados();
         System.out.println("Análisis completado");
     }
+    public String[] analizarDescripcionTexto(String descripcion) {
+        String estado = null;
+        if (diccionarioEmocional != null && descripcion != null) {
+            estado = diccionarioEmocional.detectarEmocion(descripcion);
+        }
 
+        if (estado == null || estado.trim().isEmpty()) {
+            estado = "Desconocido"; // valor por defecto
+        }
+
+        String categoriaTec = null;
+        if (diccionarioTecnico != null && descripcion != null) {
+            categoriaTec = diccionarioTecnico.obtenerCategoriaTecnica(descripcion);
+        }
+
+        if (categoriaTec == null || categoriaTec.trim().isEmpty()) {
+            categoriaTec = "General"; // categoría por defecto
+        }
+
+        this.estadoAnimo = estado;
+        this.categoriaSugerida = categoriaTec;
+
+        return new String[]{estado, categoriaTec};
+    }
+
+    public String[] analizarTicketConDiccionarios(Ticket ticket) {
+        if (ticket == null) {
+            return new String[]{"Desconocido", "General"};
+        }
+        return analizarDescripcionTexto(ticket.getDescripcion());
+    }
 }
 
 
