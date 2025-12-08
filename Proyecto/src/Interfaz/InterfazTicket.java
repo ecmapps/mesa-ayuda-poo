@@ -1,6 +1,7 @@
 package Interfaz;
 
 import AccesoADatos.*;
+import diccionario.AnalisisBow;
 import LogicaDeNegocio.*;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -12,6 +13,8 @@ public class InterfazTicket extends JFrame {
     private ServicioTicket servicioTicket;
     private ServicioUsuario servicioUsuario;
     private ServicioDepartamento ServicioDepartamento;
+    private ServicioDiccionarioEmocional servicioDiccionarioEmocional;
+    private ServicioDiccionarioTecnico servicioDiccionarioTecnico;
 
     // Componentes
     private JTextField txtId, txtAsunto, txtCedulaUsuario;
@@ -26,6 +29,8 @@ public class InterfazTicket extends JFrame {
         servicioTicket = new ServicioTicket();
         servicioUsuario = new ServicioUsuario();
         ServicioDepartamento = new ServicioDepartamento();
+        servicioDiccionarioEmocional = new ServicioDiccionarioEmocional();
+        servicioDiccionarioTecnico = new ServicioDiccionarioTecnico();
         inicializarComponentes();
         configurarVentana();
         cargarTickets();
@@ -169,6 +174,21 @@ public class InterfazTicket extends JFrame {
             if (validarCampos()) {
                 Ticket ticket = crearTicketDesdeFormulario();
                 servicioTicket.crearTicket(ticket);
+                
+                // Inicia analisis BOW
+                AnalisisBow analisisBow = new AnalisisBow(
+                    servicioDiccionarioEmocional,
+                    servicioDiccionarioTecnico
+                );
+                analisisBow.analizarPalabras(ticket);
+                
+                String estadoAnimo = analisisBow.getEstadoAnimo();
+                String categoria = analisisBow.getCategoriaSugerida();
+                
+                // Guardar análisis en BD
+                ServicioAnalisisBow servicioAnalisis = new ServicioAnalisisBow();
+                servicioAnalisis.insertarAnalisis(ticket.getId(), estadoAnimo, categoria);
+                
                 JOptionPane.showMessageDialog(this,
                         "Ticket creado exitosamente",
                         "Éxito",

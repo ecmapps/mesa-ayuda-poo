@@ -3,125 +3,73 @@ package diccionario;
 import LogicaDeNegocio.Ticket;
 import AccesoADatos.GlobalException;
 import AccesoADatos.NoDataException;
+import AccesoADatos.ServicioDiccionarioEmocional;
+import AccesoADatos.ServicioDiccionarioTecnico;
+
+import java.util.Collection;
 
 public class AnalisisBow {
 
     private String estadoAnimo;
     private String categoriaSugerida;
-    private DiccionarioEmocional diccionarioEmocional;
-    private DiccionarioTecnico diccionarioTecnico;
 
-    public AnalisisBow() throws GlobalException, NoDataException {
-        diccionarioEmocional = new DiccionarioEmocional();
-        diccionarioEmocional.cargarDesdeBD();
+    private ServicioDiccionarioEmocional servicioDiccionarioEmocional;
+    private ServicioDiccionarioTecnico servicioDiccionarioTecnico;
 
-        diccionarioTecnico = new DiccionarioTecnico();
-        diccionarioTecnico.cargarDesdeBD();
+    public AnalisisBow(ServicioDiccionarioEmocional servicioDiccionarioEmocional, ServicioDiccionarioTecnico servicioDiccionarioTecnico) {
+        this.servicioDiccionarioEmocional = servicioDiccionarioEmocional;
+        this.servicioDiccionarioTecnico = servicioDiccionarioTecnico;
     }
 
-    // Analisis del texto de un ticket (uso de diccionarios)
     public void analizarPalabras(Ticket ticket) {
-        System.out.println("Analizando LogicaDeNegocio.Ticket: " + ticket.getId());
-        detectarAnimo();
-        sugerirCategoriaTecnica();
-        mostrarResultados();
-        System.out.println("Análisis completado.");
-    }
-    // Deteccion de animo..
-    public void detectarAnimo() {
-        System.out.println("Detectando ánimo...");
-        this.estadoAnimo = "Frustración"; // Ejemplo
+        System.out.println("Analizando Ticket: " + ticket.getId());
+        String descripcion = ticket.getDescripcion();
+
+        try {
+            // Detecta emoción usando ServicioDiccionarioEmocional
+            estadoAnimo = detectarEmocion(descripcion);
+
+            // Suguiere categoría técnica usando ServicioDiccionarioTecnico
+            categoriaSugerida = sugerirCategoriaTecnica(descripcion);
+
+            mostrarResultados();
+        } catch (GlobalException | NoDataException e) {
+            System.err.println("Error durante el análisis: " + e.getMessage());
+        }
     }
 
-    //Diccionario Tecnico para la decision de categoria.. pendiente
-    public void sugerirCategoriaTecnica() {
-        this.categoriaSugerida = "IT"; // Ejemplo
-        System.out.println("Categoria sugerida: " + categoriaSugerida);
+    private String detectarEmocion(String descripcion) throws GlobalException, NoDataException {
+        Collection<PalabraDiccionario> palabrasEmocionales = servicioDiccionarioEmocional.listarTodos();
+        for (PalabraDiccionario palabra : palabrasEmocionales) {
+            if (descripcion.contains(palabra.getPalabra())) {
+                return palabra.getCategoria(); // Retorna la categoría emocional asociada
+            }
+        }
+        return "Neutral"; // Si no se encuentra ninguna palabra emocional
     }
 
-    //Consola por ahora para los resultados
+    private String sugerirCategoriaTecnica(String descripcion) throws GlobalException, NoDataException {
+        Collection<PalabraDiccionario> palabrasTecnicas = servicioDiccionarioTecnico.listarTodos();
+        for (PalabraDiccionario palabra : palabrasTecnicas) {
+            if (descripcion.contains(palabra.getPalabra())) {
+                return palabra.getCategoria(); // Retorna la categoría técnica asociada
+            }
+        }
+        return "General"; // Si no se encuentra ninguna palabra técnica
+    }
+
     public void mostrarResultados() {
         System.out.println("--- Resultados del Análisis ---");
-        System.out.println("LogicaDeNegocio.Estado de Ánimo: " + this.estadoAnimo);
-        System.out.println("Categoría Sugerida: " + this.categoriaSugerida);
+        System.out.println("Estado de Ánimo: " + estadoAnimo);
+        System.out.println("Categoría Sugerida: " + categoriaSugerida);
     }
 
-    // Getters y Setters
+    // Getters
     public String getEstadoAnimo() {
         return estadoAnimo;
-    }
-
-    public void setEstadoAnimo(String estadoAnimo) {
-        this.estadoAnimo = estadoAnimo;
     }
 
     public String getCategoriaSugerida() {
         return categoriaSugerida;
     }
-
-    public void setCategoriaSugerida(String categoriaSugerida) {
-        this.categoriaSugerida = categoriaSugerida;
-    }
-
-    public void setDiccionarioEmocional(DiccionarioEmocional diccionarioEmocional) {
-        this.diccionarioEmocional = diccionarioEmocional;
-    }
-
-    public void setDiccionarioTecnico(DiccionarioTecnico diccionarioTecnico) {
-        this.diccionarioTecnico = diccionarioTecnico;
-    }
-
-    public void analizarPalabrasConDiccionarios(Ticket ticket) {
-        System.out.println("Analizando LogicaDeNegocio.Ticket: " + ticket.getId());
-
-        String descripcion = ticket.getDescripcion();
-
-        if (diccionarioEmocional != null) {
-            this.estadoAnimo = diccionarioEmocional.detectarEmocion(descripcion);
-        } else {
-            detectarAnimo();
-        }
-
-        if (diccionarioTecnico != null) {
-            this.categoriaSugerida = diccionarioTecnico.obtenerCategoriaTecnica(descripcion);
-        } else {
-            sugerirCategoriaTecnica();
-        }
-        mostrarResultados();
-        System.out.println("Análisis completado");
-    }
-    public String[] analizarDescripcionTexto(String descripcion) {
-        String estado = null;
-        if (diccionarioEmocional != null && descripcion != null) {
-            estado = diccionarioEmocional.detectarEmocion(descripcion);
-        }
-
-        if (estado == null || estado.trim().isEmpty()) {
-            estado = "Desconocido"; // valor por defecto
-        }
-
-        String categoriaTec = null;
-        if (diccionarioTecnico != null && descripcion != null) {
-            categoriaTec = diccionarioTecnico.obtenerCategoriaTecnica(descripcion);
-        }
-
-        if (categoriaTec == null || categoriaTec.trim().isEmpty()) {
-            categoriaTec = "General"; // categoría por defecto
-        }
-
-        this.estadoAnimo = estado;
-        this.categoriaSugerida = categoriaTec;
-
-        return new String[]{estado, categoriaTec};
-    }
-
-    public String[] analizarTicketConDiccionarios(Ticket ticket) {
-        if (ticket == null) {
-            return new String[]{"Desconocido", "General"};
-        }
-        return analizarDescripcionTexto(ticket.getDescripcion());
-    }
 }
-
-
-
